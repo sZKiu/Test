@@ -1,0 +1,127 @@
+.container {
+  width: 70%;
+  max-width: 600px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"], select {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.submittedData {
+  margin-top: 20px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #35dc40 !important;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+  outline: none;
+}
+
+button:hover {
+  transition: background-color .3s;
+  background-color: #c82333 !important;
+}
+
+.agreeContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+label.agreeLabel {
+  margin: 0;
+}
+
+.submittedDataContainer {
+  width: 20%;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+}
+
+.submittedDataHeader {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.submittedDataItem {
+  margin: 10px 0;
+}
+
+@media (max-width: 480px) {
+  .container {
+  width: auto;
+    padding: 10px;
+  }
+
+  input[type="text"], select {
+    font-size: 14px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  button, input[type="submit"] {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .submittedDataContainer{
+    width: 90%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 901px) {
+  .submittedDataContainer{
+    width: 70%;
+  }
+}

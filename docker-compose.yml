@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: ./app/frontend
+    ports:
+      - "80:3000"
+    depends_on:
+      - flaskapp
+    container_name: test_frontend
+    working_dir: /home/frontend
+    env_file:
+      - ./app/frontend/.env
+    volumes:
+      - ./app/frontend:/home/frontend
+
+  flaskapp:
+    build:
+      context: ./app/backend
+    restart: always
+    working_dir: /home/backend
+    container_name: test_flaskapp
+    ports:
+      - "8005:8005"
+    volumes:
+      - ./app/backend:/home/backend
+    depends_on:
+      - postgresql
+    environment:
+      - ./app/backend/.env
+
+  postgresql:
+    image: postgres:13
+    container_name: test_postgresql
+    restart: always
+    environment:
+      - ./app/backend/.env
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
