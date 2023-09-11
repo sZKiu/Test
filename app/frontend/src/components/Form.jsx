@@ -4,7 +4,7 @@ import styles from "../styles/form.module.css";
 import { useMediaQuery } from "@react-hook/media-query";
 
 export default function Form() {
-  const BACKEND_ORIGIN = import.meta.env.VITE_BACKEND_ORIGIN;
+  const BACKEND_ORIGIN = "http://149.50.129.173/backend/api";
   const [name, setName] = useState("");
   const [sectors, setSectors] = useState([]);
   const [agreeToTerms, setAgreeToTerms] = useState(false);

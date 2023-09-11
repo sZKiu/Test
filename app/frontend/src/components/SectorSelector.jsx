@@ -8,7 +8,7 @@ const SectorSelector = ({ selectedSectors, setSelectedSectors }) => {
     setSelectedSectors: PropTypes.func.isRequired,
   };
 
-  const BACKEND_ORIGIN = import.meta.env.VITE_BACKEND_ORIGIN;
+  const BACKEND_ORIGIN = "http://149.50.129.173/backend/api";
   const [sectors, setSectors] = useState([]);
 
   useEffect(() => {
